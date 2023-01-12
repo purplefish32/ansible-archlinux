@@ -1,4 +1,6 @@
 ---
+# Install bare necessities
+- import_tasks: network.yml
 - import_tasks: user.yml
 - import_tasks: applications.yml
 - import_tasks: i3.yml

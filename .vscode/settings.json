@@ -1,12 +1,15 @@
 {
-    "cSpell.words": [
-        "archlinux",
-        "httpie",
-        "ncdu",
-        "pacman",
-        "thunar",
-        "usbutils",
-        "xinit",
-        "xorg"
-    ]
+  "cSpell.words": [
+    "archlinux",
+    "dhcpcd",
+    "httpie",
+    "ifplugd",
+    "ncdu",
+    "netctl",
+    "pacman",
+    "thunar",
+    "usbutils",
+    "xinit",
+    "xorg"
+  ]
 }
