@@ -10,6 +10,7 @@
       - unzip
       - usbutils
       - unclutter
+      - dunst
   become: true
 
 - name: install applications
