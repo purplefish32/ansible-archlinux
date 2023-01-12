@@ -3,4 +3,18 @@
   pacman:
     name:
       - htop
+      - ncdu
+      - curl
+      - jq
+      - httpie
+      - unzip
+  become: true
+
+- name: install applications
+  pacman:
+    name:
+      - chromium
+      - evince
+      - mpv
+      - thunar
   become: true
