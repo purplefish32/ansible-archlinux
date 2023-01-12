@@ -1,0 +1,6 @@
+---
+- name: install utilities
+  pacman:
+    name:
+      - htop
+  become: true
