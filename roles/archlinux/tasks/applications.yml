@@ -8,6 +8,7 @@
       - jq
       - httpie
       - unzip
+      - usbutils
   become: true
 
 - name: install applications

@@ -3,6 +3,8 @@
         "archlinux",
         "httpie",
         "ncdu",
-        "pacman"
+        "pacman",
+        "thunar",
+        "usbutils"
     ]
 }
