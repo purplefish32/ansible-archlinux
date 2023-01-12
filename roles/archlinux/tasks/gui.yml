@@ -1,0 +1,6 @@
+---
+- name: install xinit
+  pacman:
+    name:
+      - xorg-xinit
+  become: true

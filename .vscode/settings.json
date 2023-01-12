@@ -5,6 +5,8 @@
         "ncdu",
         "pacman",
         "thunar",
-        "usbutils"
+        "usbutils",
+        "xinit",
+        "xorg"
     ]
 }
