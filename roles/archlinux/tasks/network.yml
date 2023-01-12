@@ -8,4 +8,5 @@
       - openvpn
       - wireguard-tools
       - wpa_supplicant
+      - network-manager-applet
   become: true

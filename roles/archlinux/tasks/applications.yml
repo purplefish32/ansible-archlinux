@@ -13,7 +13,6 @@
       - dunst
       - slock
       - pasystray
-      - nm-applet
   become: true
 
 - name: install applications
