@@ -1,5 +1,4 @@
 - name: Install code
   aur:
     name: visual-studio-code-bin
-    hash: fde93fc7fdcaa83ffaa55d2c88fa69516e6a7158
-    become_user: "{{ archlinux_username }}"
+    user: "{{ archlinux_username }}"
