@@ -2,4 +2,4 @@
   aur:
     name: visual-studio-code-bin
     hash: fde93fc7fdcaa83ffaa55d2c88fa69516e6a7158
-    user: "{{ archlinux_username }}"
+    become_user: "{{ archlinux_username }}"
