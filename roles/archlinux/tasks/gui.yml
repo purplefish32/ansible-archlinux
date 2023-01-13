@@ -25,6 +25,12 @@
       - lxrandr
   become: true
 
+- name: install compositor
+  pacman:
+    name:
+      - picom
+  become: true
+
 - name: install xclip
   pacman:
     name:

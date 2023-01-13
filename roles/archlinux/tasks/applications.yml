@@ -13,6 +13,7 @@
       - dunst
       - slock
       - pasystray
+      - lf
   become: true
 
 - name: install applications
