@@ -149,5 +149,11 @@ client.background       #2B2C2B
 # Set the wallpaper using feh
 exec /usr/bin/sh /home/donovan/.fehbg &
 
+# Disable capslock
+exec setxkbmap -option ctrl:nocaps &
+
+# Disable numlock
+exec numlockx &
+
 # Configure media keys
 exec xbindkeys
