@@ -1,0 +1,67 @@
+---
+# TODO install conky-cairo via yay
+# - name: install conky
+#   pacman:
+#     name:
+#       - conky
+#   become: true
+
+- name: install fonts
+  pacman:
+    name:
+      - ttf-carlito
+  become: true
+
+- name: copy fonts
+  copy:
+    src: "conky/fonts/{{ item }}"
+    dest: /home/{{ archlinux_username }}/.fonts/{{ item }}
+    owner: "{{ archlinux_username }}"
+    group: users
+    mode: 0600
+  with_items:
+    - BebasNeue-Regular.ttf
+  become: true
+  become_user: "{{ archlinux_username }}"
+
+- name: ensures /home/{{ archlinux_username }}/.config/conky dir exists
+  file: 
+    path: "/home/{{ archlinux_username }}/.config/conky"
+    state: directory
+
+- name: ensures /home/{{ archlinux_username }}/.config/conky/scripts dir exists
+  file: 
+    path: "/home/{{ archlinux_username }}/.config/conky/scripts"
+    state: directory
+
+- name: ensures /home/{{ archlinux_username }}/.config/conky/scripts/lua dir exists
+  file: 
+    path: "/home/{{ archlinux_username }}/.config/conky/scripts/lua"
+    state: directory
+
+- name: copy conky config
+  template:
+    src: conky/conky.conf
+    dest: /home/{{ archlinux_username }}/.config/conky/conky.conf
+    owner: "{{ archlinux_username }}"
+    group: users
+  become: true
+  become_user: "{{ archlinux_username }}"
+
+- name: copy scripts
+  copy:
+    src: conky/scripts/weather.sh
+    dest: /home/{{ archlinux_username }}/.config/conky/scripts/weather.sh
+    owner: "{{ archlinux_username }}"
+    group: users
+  become: true
+  become_user: "{{ archlinux_username }}"
+
+- name: copy lua scripts
+  copy:
+    src: conky/scripts/lua/rings-v1.2.1.lua
+    dest: /home/{{ archlinux_username }}/.config/conky/scripts/lua/rings-v1.2.1.lua
+    owner: "{{ archlinux_username }}"
+    group: users
+  become: true
+  become_user: "{{ archlinux_username }}"

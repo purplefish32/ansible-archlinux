@@ -11,5 +11,8 @@
     "usbutils",
     "xinit",
     "xorg"
-  ]
+  ],
+  "files.associations": {
+    "config": "shellscript"
+  },
 }

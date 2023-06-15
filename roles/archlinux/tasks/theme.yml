@@ -1,0 +1,14 @@
+- name: Installing arc-gtk theme
+  pacman:
+    name:
+      - gtk-engine-murrine
+      - arc-gtk-theme
+    state: present
+  become: true
+
+- name: Installing icon themes
+  pacman:
+    name:
+      - arc-icon-theme
+    state: present
+  become: true

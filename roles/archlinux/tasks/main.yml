@@ -1,11 +1,14 @@
 ---
 # Install bare necessities
+# - import_tasks: pacman.yml
+- import_tasks: theme.yml
 - import_tasks: git.yml
 - import_tasks: network.yml
 - import_tasks: user.yml
 - import_tasks: applications.yml
 - import_tasks: gui.yml
 - import_tasks: i3.yml
+- import_tasks: conky.yml
 - import_tasks: wallpaper.yml
 - import_tasks: kitty.yml
 - import_tasks: code.yml

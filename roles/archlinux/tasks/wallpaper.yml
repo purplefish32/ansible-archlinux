@@ -6,7 +6,7 @@
 
 - name: template wallpaper script
   template:
-    src: fehbg
+    src: .fehbg
     dest: /home/{{ archlinux_username }}/.fehbg
     owner: "{{ archlinux_username }}"
     group: users
