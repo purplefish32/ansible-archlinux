@@ -1,11 +1,12 @@
 ---
-- name: install xinit
+- name: Install GUI
   pacman:
     name:
+      - xorg
       - xorg-xinit
   become: true
 
-- name: install fonts
+- name: Install fonts
   pacman:
     name:
       - adobe-source-code-pro-fonts
@@ -18,30 +19,29 @@
       - ttf-liberation
   become: true
 
-- name: install display configuration tools
+- name: Install display configuration tools
   pacman:
     name:
       - arandr
       - lxrandr
   become: true
 
-- name: install compositor
+- name: Install compositor
   pacman:
     name:
       - picom
   become: true
 
-- name: install xclip
+- name: Install xclip
   pacman:
     name:
       - xclip
   become: true
 
-- name: install GUI themes
+- name: Install GUI themes
   pacman:
     name:
       - elementary-icon-theme
       - gnome-themes-extra
       - lxappearance
-      - xcursor-premium
   become: true

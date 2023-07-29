@@ -8,6 +8,7 @@
       - jq
       - httpie
       - unzip
+      - xarchiver
       - usbutils
       - unclutter
       - dunst
@@ -17,13 +18,15 @@
       - numlockx
       - vim
       - wireguard-tools
+      - curl
+      - wget
   become: true
 
 - name: install applications
   pacman:
     name:
-      - chromium
       - evince
       - mpv
       - thunar
+      - thunar-archive-plugin
   become: true

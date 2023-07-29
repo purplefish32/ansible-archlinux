@@ -1,10 +1,9 @@
 ---
-# TODO install conky-cairo via yay
-# - name: install conky
-#   pacman:
-#     name:
-#       - conky
-#   become: true
+- name: install conky
+  yay:
+    name:
+      - conky-lua-nv
+    state: present
 
 - name: install fonts
   pacman:

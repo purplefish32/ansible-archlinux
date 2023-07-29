@@ -1,3 +1,12 @@
+#Needed for i3-gaps
+#hide_edge_borders both
+for_window [class="^.*"] border pixel 2 
+gaps inner 15 
+gaps outer 15
+
+bindsym $mod+z		gaps outer current plus 5
+bindsym $mod+Shift+z	gaps outer current minus 5
+
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
@@ -118,14 +127,14 @@ bindsym $mod+Shift+s exec "i3-nagbar -m 'Do you really want to shutdown ?' -b 'Y
 bindsym --release $mod+Shift+l exec /usr/bin/slock
 
 # Autostart applications
-exec --no-startup-id unclutter 
-exec --no-startup-id dunst 
+exec --no-startup-id unclutter
+exec --no-startup-id dunst
 exec --no-startup-id pasystray
 exec --no-startup-id nm-applet
 exec --no-startup-id conky
 exec --no-startup-id picom
 
-# Volume 
+# Volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
@@ -147,8 +156,11 @@ client.focused          #556064 #556064 #80FFF9 #FDF6E3
 client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
 client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
 client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-client.placeholder      #000000 #0c0c0c #ffffff #000000 
+client.placeholder      #000000 #0c0c0c #ffffff #000000
 client.background       #2B2C2B
+
+# Set screens
+exec /usr/bin/sh /home/{{ archlinux_username }}/.screenlayout/default.sh &
 
 # Set the wallpaper using feh
 exec /usr/bin/sh /home/{{ archlinux_username }}/.fehbg &

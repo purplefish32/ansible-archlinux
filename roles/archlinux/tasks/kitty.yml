@@ -15,7 +15,7 @@
 
 - name: configure kitty
   template:
-    src: kitty.conf
+    src: kitty/kitty.conf
     dest: /home/{{ archlinux_username }}/.config/kitty/kitty.conf
     owner: "{{ archlinux_username }}"
     group: users

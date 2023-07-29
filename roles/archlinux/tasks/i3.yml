@@ -1,37 +1,40 @@
 ---
 - name: install i3
-  pacman:
+  yay:
     name:
-      - xorg
-      - i3-wm
+      - i3-gaps
       - i3lock
       - i3status
       - dmenu
-  become: true
 
 - name: create i3 configuration directory
   file:
-    name: /home/{{ archlinux_username }}/.i3
+    name: /home/{{ archlinux_username }}/.config/i3
     state: directory
     owner: "{{ archlinux_username }}"
     group: users
     mode: 0755
-  become: true
 
 - name: configure i3
   template:
     src: i3/config
-    dest: /home/{{ archlinux_username }}/.i3/config
+    dest: /home/{{ archlinux_username }}/.config/i3/config
     owner: "{{ archlinux_username }}"
     group: users
     mode: 0644
-  become: true
+
+- name: create i3status configuration directory
+  file:
+    name: /home/{{ archlinux_username }}/.config/i3status
+    state: directory
+    owner: "{{ archlinux_username }}"
+    group: users
+    mode: 0755
 
 - name: configure i3status
   template:
-    src: i3/i3status
-    dest: /home/{{ archlinux_username }}/.i3/i3status
+    src: i3status/config
+    dest: /home/{{ archlinux_username }}/.config/i3status/config
     owner: "{{ archlinux_username }}"
     group: users
     mode: 0644
-  become: true
