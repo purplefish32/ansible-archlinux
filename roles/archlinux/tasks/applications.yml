@@ -16,6 +16,7 @@
       - pasystray
       - lf
       - numlockx
+      - vi
       - vim
       - wireguard-tools
       - curl

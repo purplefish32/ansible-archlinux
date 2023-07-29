@@ -13,3 +13,8 @@
     - name: "archlinux_user_email"
       prompt: "Enter your email address"
       private: false
+    - name: "archlinux_openweathermap_api_key"
+      prompt: "Enter your openweathermap API key"
+      private: false
+
+      

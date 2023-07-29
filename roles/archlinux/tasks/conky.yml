@@ -44,11 +44,12 @@
     dest: /home/{{ archlinux_username }}/.config/conky/conky.conf
     owner: "{{ archlinux_username }}"
     group: users
+    mode: 0755
   become: true
   become_user: "{{ archlinux_username }}"
 
 - name: copy scripts
-  copy:
+  template:
     src: conky/scripts/weather.sh
     dest: /home/{{ archlinux_username }}/.config/conky/scripts/weather.sh
     owner: "{{ archlinux_username }}"
