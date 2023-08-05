@@ -21,6 +21,8 @@
       - wireguard-tools
       - curl
       - wget
+      - flameshot
+      - ranger
   become: true
 
 - name: install applications

@@ -1,0 +1,5 @@
+---
+- name: Install font awesome font
+  yay:
+    name: ttf-font-awesome
+    state: present

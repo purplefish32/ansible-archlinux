@@ -14,3 +14,6 @@
 - import_tasks: code.yml
 - import_tasks: spotify.yml
 - import_tasks: google-chrome.yml
+- import_tasks: emote.yml
+- import_tasks: fa.yml
+- import_tasks: fish.yml

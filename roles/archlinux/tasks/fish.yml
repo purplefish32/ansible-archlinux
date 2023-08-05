@@ -1,0 +1,13 @@
+---
+- name: Install Fish
+  pacman:
+    name:
+      - fish
+  become: true
+
+- name: Ensure the user has a fish shell.
+  user:
+    name: donovan
+    shell: /bin/fish
+    state: present
+  become: true

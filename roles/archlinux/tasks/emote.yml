@@ -1,0 +1,10 @@
+---
+- name: Install emote
+  yay:
+    name: emote
+    state: present
+
+- name: Install apple emoji font
+  yay:
+    name:  ttf-apple-emoji
+    state: present
