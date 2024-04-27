@@ -130,6 +130,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws8
 # Switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
+# Create a sticky floating window in the top right
+bindsym $mod+Shift+0 floating toggle, sticky toggle, resize set 960 540, move position 4060px 100px
+
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
@@ -154,14 +157,14 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar --transparency
-	position bottom
-	strip_workspace_numbers no
-  mode hide
-  colors {
-    background #000000DD
-  }
-  status_command i3status --config ~/.i3/i3status
+    i3bar_command i3bar --transparency
+    position bottom
+    strip_workspace_numbers no
+    mode hide
+    colors {
+        background #000000DD
+    }
+    status_command i3status --config ~/.i3/i3status
 }
 
 # Theme colors
