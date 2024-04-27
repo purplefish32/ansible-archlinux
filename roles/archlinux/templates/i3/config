@@ -1,3 +1,6 @@
+# Set the screen /wallpaper / conky
+exec --no-startup-id /usr/bin/sh /home/donovan/.screenlayout/default.sh && /usr/bin/sh /home/donovan/.fehbg && conky &
+
 #Needed for i3-gaps
 #hide_edge_borders both
 for_window [class="^.*"] border pixel 2
@@ -146,7 +149,6 @@ exec --no-startup-id unclutter
 exec --no-startup-id dunst
 exec --no-startup-id pasystray
 exec --no-startup-id nm-applet
-exec --no-startup-id conky
 exec --no-startup-id picom
 exec --no-startup-id emote
 
@@ -174,12 +176,6 @@ client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
 client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000
 client.background       #2B2C2B
-
-# Set screens
-exec_always --no-startup-id /usr/bin/sh /home/{{ archlinux_username }}/.screenlayout/default.sh &
-
-# Set the wallpaper using feh
-exec_always --no-startup-id /usr/bin/sh /home/{{ archlinux_username }}/.fehbg &
 
 # Disable capslock
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps &
